@@ -7,7 +7,7 @@ export const Movies = () => {
 
     const onSearch = e => {
         e.preventDefault()
-        const query = e.target[0].value
+        // const query = e.target[0].value
         setQuery(query)
         setData([...data, query])
     }
