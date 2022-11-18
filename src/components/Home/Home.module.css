@@ -25,19 +25,22 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
- }
+}
 
- .cover {
+/* .cover {
     margin-left: 10px;
     margin-top: 10px;
     margin-right: 10px;
    
- }
+ } */
 
- .text {
+.text {
     margin: 0;
- }
+    width: 250px;
 
- .filmInformation {
+}
+
+.filmInformation {
     text-align: center;
- }
+    padding: 10px;
+}

@@ -1,20 +1,19 @@
 import css from './Movies.module.css'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useParams } from 'react-router-dom'
 
-export const Films = () => {
+export const MovieDetails = () => {
+    const { movieId } = useParams()
 
+    console.log(movieId.films)
     return <div className={css.films}>
         <Link className={css.link} to='/'>← back</Link>
 
         <div className={css.contain}>
             <img className={css.img} src="" alt="" />
             <div className={css.about}>
-                <h2>Super Film</h2>
-                <p className={css.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nobis corporis atque reprehenderit. Modi necessitatibus quibusdam,
-                    eos neque nesciunt ratione aperiam incidunt
-                    fugit ex hic quas impedit consequuntur sed eum doloribus.</p>
-                <h3>Autor: Baran</h3>
+                <h2>title</h2>
+                <p className={css.text}>789qwezxc</p>
+                <h3>Autor: </h3>
                 <h3>Genres: Action</h3>
             </div>
         </div>
@@ -25,7 +24,7 @@ export const Films = () => {
                 <li ><Link className={css.linkCast} to='rewievs'>Rewievs</Link></li>
             </ul>
         </div>
-        <div className={css.about }>
+        <div className={css.about}>
             <Outlet />
         </div>
     </div>
