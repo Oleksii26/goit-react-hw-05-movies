@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import css from './Movies.module.css'
-import {searchFilmsByName} from '../FechApi'
+import { searchFilmsByName } from '../FechApi'
 
 export const Movies = () => {
     const [query, setQuery] = useState('')
     const [films, setFilms] = useState([])
-    // const [data, setData] = useState([])
 
     useEffect(() => {
-        
+
         const getFilmsData = async (query) => {
 
             try {
@@ -18,12 +17,12 @@ export const Movies = () => {
                 alert('Something went wrong')
             }
         }
-        if(query !== '') {
+        if (query !== '') {
             getFilmsData(query)
         }
-        console.log(films)
-    }, [query])
 
+    }, [query])
+    console.log(films)
     const onSearch = e => {
         e.preventDefault()
         const query = e.target[0].value
