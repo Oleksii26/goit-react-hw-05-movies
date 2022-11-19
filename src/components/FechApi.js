@@ -12,8 +12,15 @@ export const popularFilms = async () => {
 
 //Пошук за запитом
 
-export const searchFilms = async (query) => {
+export const searchFilmsByName = async (query) => {
     const {data} = await axios.get(`/search/movie?api_key=${API_KEY}&query=${query}`)
+    return data
+}
+
+//Пошук по айді 
+
+export const searchFilmsById = async (id) => {
+    const {data} = await axios.get(`/movie/${id}?api_key=${API_KEY}`)
     return data
 }
 

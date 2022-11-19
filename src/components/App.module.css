@@ -15,3 +15,9 @@
     padding: 20px;
     box-shadow: 10px 5px 5px gray;
 }
+
+.App {
+width: 97vw;
+margin-right: auto;
+    margin-left: auto;
+}

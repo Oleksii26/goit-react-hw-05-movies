@@ -14,17 +14,17 @@ export const Home = () => {
 
     useEffect(() => {
 
-        const getImageData = async () => {
+        const getFilmsData = async () => {
 
             try {
                 const result = await popularFilms()
                 setFilms(films => [...films, ...result.results])
-                console.log(result.results)
+              
             } catch (error) {
                 alert('Something went wrong')
             }
         }
-        getImageData()
+        getFilmsData()
     }, [])
 
     return <div className={css.container}>
@@ -32,8 +32,8 @@ export const Home = () => {
         <div className={css.popular}>
             {films.map(e => {
                 return <div className={css.filmInformation}>
-                    <Link key={e.id} className={css.link} to='/movies/:movieId' ><img className={css.cover} src={`${IMAGE_FILM}${e.backdrop_path}`}
-                        alt={e.name || e.title} width={250} />
+                    <Link key={e.id} className={css.link} to={`movies/${e.id}`}><img className={css.cover} src={`${IMAGE_FILM}${e.backdrop_path}`}
+                        alt={e.name || e.title} width={400} />
                         <p className={css.text}>{e.name || e.title}</p>
                     </Link>
                 </div>

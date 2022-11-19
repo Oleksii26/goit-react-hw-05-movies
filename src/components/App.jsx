@@ -9,18 +9,18 @@ import { Rewievs } from './Movies/Casts/Rewievs';
 export const App = () => {
  
   return (<>
-    <div>
+    <div className={css.App}>
       <nav className={css.navigation}>
         <NavLink className={css.navLink} to='/'>Home</NavLink>
         <NavLink className={css.navLink} to='/movies'>Movies</NavLink>
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/movies' element={<Movies />} />
         <Route path='/movies/:movieId' element={<MovieDetails />} >
           <Route path='cast' element={<Cast />} />
           <Route path='rewievs' element={<Rewievs />} />
         </Route>
-        <Route path='/movies' element={<Movies />} />
         <Route path='*' element={<Home />} />
       </Routes>
     </div>
