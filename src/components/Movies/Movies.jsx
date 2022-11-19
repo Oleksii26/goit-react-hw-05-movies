@@ -13,7 +13,7 @@ export const Movies = () => {
 
             try {
                 const result = await searchFilmsByName(query)
-                setFilms(films => [...result.results])
+                setFilms([...result.results])
             } catch (error) {
                 alert('Something went wrong')
             }
