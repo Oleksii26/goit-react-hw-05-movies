@@ -15,7 +15,7 @@ export const MovieDetails = () => {
                 const result = await searchFilmsById(Number(movieId))
                 setMovie(result)
             } catch (error) {
-                // alert('Oooops')
+                alert('Oooops')
             }
         }
         getFilmById()
@@ -23,21 +23,22 @@ export const MovieDetails = () => {
     console.log(movie)
     const noPhoto = 'https://www.alfasolare.ru/a_solar_restyle/wp-content/themes/consultix/images/no-image-found-360x260.png'
     const { title, release_date, vote_average, backdrop_path, id, overview, /* genres */ } = movie
-    // const releseYeahr = movie.release_date.slice(0, 4)
+    // const genreString = movie.genres.map(genre => genre.name).join(', ')
+    const genre = movie.genres
+// console.log(genre.map(e => e.name))
     return <div className={css.films}>
         <Link className={css.link} to='/'>← back</Link>
 
         <div className={css.contain}>
             <img src={backdrop_path ? `${IMAGE_FILM}${backdrop_path}` : noPhoto} alt={id} />
             <div className={css.about}>
-                <h1>{title} {release_date/* .slice(0, 4) */}</h1>
+                <h1>{title} ({`${release_date}`.slice(0, 4)})</h1>
                 <p className={css.text}>User Score: {(vote_average * 10).toFixed()}%</p>
                 <h2>Overview</h2>
                 <p>{overview}</p>
                 <h3>Genres</h3>
-
-                {/* <p>{genres.map(e => <span>{e.name} </span> )}</p> */}
-               
+                {/* <p>{`${genre}`.map(e => e.name).join(', ')}</p> */}
+                {/* <p>{`${genre[1].name}`}</p> */}
             </div>
         </div>
         <div className={css.cast}>
@@ -48,7 +49,7 @@ export const MovieDetails = () => {
             </ul>
         </div>
         <div className={css.about}>
-            <Outlet prop='manny' />
+            <Outlet />
         </div>
     </div>
 }

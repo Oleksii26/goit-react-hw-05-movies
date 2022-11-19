@@ -15,17 +15,17 @@
 }
 
 .contain {
+    display: flex;
     padding-bottom: 10px;
     padding-left: 40px;
     padding-right: 40px;
-    display: flex;
     border-bottom: 2px solid gray;
     box-shadow: 10px 5px 5px gray;
 }
 
 .about {
     padding-left: 40px;
-    
+
 }
 
 .link {
@@ -51,6 +51,7 @@
     width: 500px;
 
 }
+
 .list {
     display: flex;
     list-style: none;
