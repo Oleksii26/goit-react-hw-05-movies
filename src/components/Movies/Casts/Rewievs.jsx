@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { searchFilmsByReviews } from '../../FechApi'
 import css from './Casts.module.css'
 
-const IMAGE_FILM = 'https://image.tmdb.org/t/p/w500/'
+// const IMAGE_FILM = 'https://image.tmdb.org/t/p/w500/'
 
 export const Rewievs = () => {
     const { movieId } = useParams()

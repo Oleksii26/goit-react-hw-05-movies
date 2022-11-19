@@ -24,7 +24,7 @@ export const MovieDetails = () => {
     const noPhoto = 'https://www.alfasolare.ru/a_solar_restyle/wp-content/themes/consultix/images/no-image-found-360x260.png'
     const { title, release_date, vote_average, backdrop_path, id, overview, /* genres */ } = movie
     // const genreString = movie.genres.map(genre => genre.name).join(', ')
-    const genre = movie.genres
+    // const genre = movie.genres
 // console.log(genre.map(e => e.name))
     return <div className={css.films}>
         <Link className={css.link} to='/'>← back</Link>
