@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import css from './Movies.module.css'
 import { searchFilmsByName } from '../FechApi'
+import { Link } from 'react-router-dom'
 
 export const Movies = () => {
     const [query, setQuery] = useState('')
@@ -35,6 +36,6 @@ export const Movies = () => {
             <input type="text" />
             <button type="submit">Search</button>
         </form>
-        <ul>{films.map((e, i) => <li key={e.id + i}>{e.original_title}</li>)}</ul>
+        <ul>{films.map((e, i) => <li key={e.id + i}><Link to={`${e.id}`}>{e.original_title}</Link> </li>)}</ul>
     </div>
 }

@@ -15,7 +15,7 @@ export const App = () => {
         <NavLink className={css.navLink} to='/movies'>Movies</NavLink>
       </nav>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route index /* path='/' */ element={<Home />} />
         <Route path='/movies' element={<Movies />} />
         <Route path='/movies/:movieId' element={<MovieDetails />} >
           <Route path='cast' element={<Cast />} />

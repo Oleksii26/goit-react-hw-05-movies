@@ -9,36 +9,30 @@ export const MovieDetails = () => {
     const { movieId } = useParams()
     const [movie, setMovie] = useState('')
 
+
     useEffect(() => {
-        const getFilmById = async () => {
-            try {
-                const result = await searchFilmsById(Number(movieId))
-                setMovie(result)
-            } catch (error) {
-                alert('Oooops')
-            }
-        }
-        getFilmById()
+        searchFilmsById(movieId).then((data) => setMovie(data))
     }, [movieId])
-    console.log(movie)
-    const noPhoto = 'https://www.alfasolare.ru/a_solar_restyle/wp-content/themes/consultix/images/no-image-found-360x260.png'
+
+  
+    const noPhoto = 'https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483097.jpg'
     const { title, release_date, vote_average, backdrop_path, id, overview, /* genres */ } = movie
-    // const genreString = movie.genres.map(genre => genre.name).join(', ')
-    // const genre = movie.genres
-// console.log(genre.map(e => e.name))
+
+    // console.log(genres[0].name)
+ 
     return <div className={css.films}>
         <Link className={css.link} to='/'>← back</Link>
 
         <div className={css.contain}>
-            <img src={backdrop_path ? `${IMAGE_FILM}${backdrop_path}` : noPhoto} alt={id} />
+            <img height={280} src={backdrop_path ? `${IMAGE_FILM}${backdrop_path}` : noPhoto} alt={id} />
             <div className={css.about}>
                 <h1>{title} ({`${release_date}`.slice(0, 4)})</h1>
                 <p className={css.text}>User Score: {(vote_average * 10).toFixed()}%</p>
                 <h2>Overview</h2>
                 <p>{overview}</p>
-                <h3>Genres</h3>
-                {/* <p>{`${genre}`.map(e => e.name).join(', ')}</p> */}
-                {/* <p>{`${genre[1].name}`}</p> */}
+                {/* <h3>Genres</h3> */}
+                {/* <p>{genre.map(e => e.id).join(', ')}</p> */}
+                {/* <p>{genres}</p> */}
             </div>
         </div>
         <div className={css.cast}>
