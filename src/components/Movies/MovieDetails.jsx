@@ -22,7 +22,7 @@ export const MovieDetails = () => {
     }, [movieId])
     console.log(movie)
     const noPhoto = 'https://www.alfasolare.ru/a_solar_restyle/wp-content/themes/consultix/images/no-image-found-360x260.png'
-    const { title, release_date, vote_average, backdrop_path, id, overview, genres } = movie
+    const { title, release_date, vote_average, backdrop_path, id, overview, /* genres */ } = movie
     // const releseYeahr = movie.release_date.slice(0, 4)
     return <div className={css.films}>
         <Link className={css.link} to='/'>← back</Link>
