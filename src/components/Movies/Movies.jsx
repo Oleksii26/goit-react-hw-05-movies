@@ -5,7 +5,7 @@ import {searchFilmsByName} from '../FechApi'
 export const Movies = () => {
     const [query, setQuery] = useState('')
     const [films, setFilms] = useState([])
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
 
     useEffect(() => {
         

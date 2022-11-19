@@ -23,9 +23,9 @@ export const Cast = () => {
 
     console.log(movie)
     
-    // return <ul className={css.list}>
-    //     {movie.cast.map(e => <li key={e.cast_id}>
-    //         <img className={css.image}src={`${IMAGE_FILM}${e.profile_path}`}
-    //             alt={e.original_name} /><p> {e.original_name}</p></li>)}
-    // </ul>
+    return <ul className={css.list}>
+        {movie.cast.map(e => <li key={e.cast_id}>
+            <img className={css.image}src={`${IMAGE_FILM}${e.profile_path}`}
+                alt={e.original_name} /><p> {e.original_name}</p></li>)}
+    </ul>
 }
