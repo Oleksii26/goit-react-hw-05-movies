@@ -4,7 +4,7 @@ import { searchFilmsByCredits } from '../../FechApi'
 import css from './Casts.module.css'
 import { IMAGE_FILM } from '../../FechApi'
 
-export const Cast = () => {
+ const Cast = () => {
     const { movieId } = useParams()
     const [movie, setMovie] = useState([])
 
@@ -20,3 +20,4 @@ export const Cast = () => {
                 alt={e.name} /><p>{e.name}</p></li>)}
     </ul>) : ('Not information'))
 }
+export default Cast

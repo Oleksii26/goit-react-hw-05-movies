@@ -5,7 +5,7 @@ import { searchFilmsById } from '../FechApi'
 import { IMAGE_FILM } from '../FechApi'
 import { NO_PHOTO } from '../FechApi'
 
-export const MovieDetails = () => {
+ const MovieDetails = () => {
    const navigate = useNavigate()
     const { movieId } = useParams('')
     const [movie, setMovie] = useState([])
@@ -43,3 +43,4 @@ export const MovieDetails = () => {
         </div>
     </div>
 }
+export default MovieDetails

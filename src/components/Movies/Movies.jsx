@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { IMAGE_FILM } from '../FechApi'
 import { NO_IMAGE } from '../FechApi'
 
-export const Movies = () => {
+ const Movies = () => {
     const [query, setQuery] = useState('')
     const [films, setFilms] = useState([])
 
@@ -46,3 +46,4 @@ export const Movies = () => {
         </div>
     </div>
 }
+export default Movies

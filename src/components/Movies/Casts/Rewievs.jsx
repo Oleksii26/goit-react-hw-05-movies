@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { searchFilmsByReviews } from '../../FechApi'
 import css from './Casts.module.css'
 
-export const Rewievs = () => {
+const Rewievs = () => {
     const { movieId } = useParams()
     const [movie, setMovie] = useState([])
 
@@ -19,3 +19,4 @@ export const Rewievs = () => {
         }
     </ul >) : ('We don`t have any rewievs this movie'))
 }
+export default Rewievs

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { popularFilms } from '../FechApi'
 import { IMAGE_FILM } from '../FechApi';
 
-export const Home = () => {
+const Home = () => {
 
     const [films, setFilms] = useState([])
 
@@ -39,3 +39,4 @@ export const Home = () => {
     </div>
 }
 
+export default Home
