@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { searchFilmsByCredits } from '../../FechApi'
 import css from './Casts.module.css'
-
-const IMAGE_FILM = 'https://image.tmdb.org/t/p/w500/'
+import { IMAGE_FILM } from '../../FechApi'
 
 export const Cast = () => {
     const { movieId } = useParams()
@@ -12,6 +11,7 @@ export const Cast = () => {
 
     useEffect(() => {
         searchFilmsByCredits(movieId).then((data) => setMovie(data.cast))
+
     }, [movieId])
 
     return ((movie.length > 0) ? (<ul className={css.list}>

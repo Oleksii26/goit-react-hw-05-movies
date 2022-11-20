@@ -25,7 +25,7 @@
 
 .about {
     padding-left: 40px;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .link {
@@ -53,8 +53,11 @@
 }
 
 .list {
-    display: flex;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 20px;
 }
 
 .linkCast {
@@ -67,4 +70,22 @@
     padding: 5px 8px;
     cursor: pointer;
     margin-right: 10px;
+}
+
+.image {
+    width: 180px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    height: 100px;
+    margin: 10px;
+}
+
+.linkFilm {
+    text-decoration: none;
+    color: black;
 }
