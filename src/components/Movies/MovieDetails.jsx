@@ -15,14 +15,13 @@ const MovieDetails = () => {
     useEffect(() => {
         searchFilmsById(movieId).then((data) => setMovie(data))}, [movieId])
 
-// const handleGoBack = () => {
-//     navigate(location.state.from)
-// }
+const handleGoBack = () => {
+    navigate(location.state.from)
+}
 const { release_date, vote_average, backdrop_path, id, overview, genres } = movie
 
 return <div className={css.films}>
-    <Link className={css.link} onClick={() => navigate(-1)}>← back</Link>
-    {/* <button type='button' onClick={handleGoBack}>← back</button> */}
+    <button className={css.link} type='button' onClick={handleGoBack}>← back</button>
     <div className={css.contain}>
         <img height={280} src={backdrop_path ? `${IMAGE_FILM}${backdrop_path}` : NO_PHOTO} alt={id} />
         <div className={css.about}>
