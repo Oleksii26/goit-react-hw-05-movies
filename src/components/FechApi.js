@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const NO_IMAGE = 'https://gopractice.ru/wp-content/uploads/2015/11/o-THE-ART-OF-SAYING-NO-facebook.jpg'
-export const NO_PHOTO = 'https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483097.jpg'
+export const NO_PHOTO = 'https://us.123rf.com/450wm/solarus/solarus2112/solarus211200026/solarus211200026.jpg?ver=6'
 export const IMAGE_FILM = 'https://image.tmdb.org/t/p/w500/'
 const API_KEY = '6e9a81a407105e7aedf1637991fa6ef2'
 

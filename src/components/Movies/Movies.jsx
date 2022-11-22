@@ -28,7 +28,7 @@ const Movies = () => {
  
     return <div className={css.container}>
         <form onSubmit={onSubmit} action="">
-            <input onChange={onChange} type="text" />
+            <input className={css.input} onChange={onChange} type="text" />
             <button type="submit">Search</button>
         </form>
         <div className={css.list}>

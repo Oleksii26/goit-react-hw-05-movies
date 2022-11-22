@@ -10,8 +10,32 @@
 }
 
 .container {
-    padding-left: 40px;
+    padding: 0, 10px;
 }
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 1024) {
+    .container {
+        padding-left: 40px;
+    }
+}
+
+.title {
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 1024) {
+    .title {
+        margin-left: 40px;
+    }
+}
+
 
 .list {
     list-style: none;

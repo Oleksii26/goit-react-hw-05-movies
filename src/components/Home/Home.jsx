@@ -24,7 +24,7 @@ const locations = useLocation()
     }, [])
 
     return <div className={css.container}>
-        <h2>Trending today</h2>
+        <h2 className={css.title}>Trending today</h2>
         <div className={css.popular}>
             {films.map((e, i) => {
                 return <div key={e.id + i} className={css.filmInformation}>

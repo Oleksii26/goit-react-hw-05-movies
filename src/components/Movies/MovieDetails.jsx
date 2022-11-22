@@ -23,7 +23,7 @@ const { release_date, vote_average, backdrop_path, id, overview, genres } = movi
 return <div className={css.films}>
     <button className={css.link} type='button' onClick={handleGoBack}>← back</button>
     <div className={css.contain}>
-        <img height={280} src={backdrop_path ? `${IMAGE_FILM}${backdrop_path}` : NO_PHOTO} alt={id} />
+        <img className={css.img} src={backdrop_path ? `${IMAGE_FILM}${backdrop_path}` : NO_PHOTO} alt={id} />
         <div className={css.about}>
             <h1>{movie.title}  ({`${release_date}`.slice(0, 4) || 'unknown'})</h1>
             <p className={css.text}>User Score: {(vote_average * 10).toFixed()}%</p>

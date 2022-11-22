@@ -1,12 +1,17 @@
 .container {
-    padding-left: 40px;
     padding-top: 20px;
 }
 
-.img {
-    width: 180px;
-    height: 300px;
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 40px;
+    }
+}
 
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .films {
@@ -15,17 +20,44 @@
 }
 
 .contain {
-    display: flex;
+
     padding-bottom: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
     border-bottom: 2px solid gray;
     box-shadow: 10px 5px 5px gray;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .contain {
+        max-width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        .contain {
+            display: flex;
+            padding-left: 40px;
+            padding-right: 40px;
+            border: none;
+        }
+    }
 }
 
 .about {
-    padding-left: 40px;
-    padding-top: 50px;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .about {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        padding-left: 40px;
+        padding-top: 50px;
+    }
 }
 
 .link {
@@ -42,13 +74,20 @@
 }
 
 .cast {
-    padding-left: 40px;
+    padding-left: 10px;
     border-bottom: 2px solid gray;
     box-shadow: 10px 5px 5px gray;
 }
 
+
+@media (min-width: 1024px) {
+    .cast {
+        padding-left: 40px;
+    }
+}
+
 .text {
-    width: 500px;
+    width: 390px;
 
 }
 
@@ -58,6 +97,7 @@
     flex-wrap: wrap;
     row-gap: 30px;
     column-gap: 20px;
+    padding-left: 0;
 }
 
 .linkCast {
@@ -88,4 +128,8 @@
 .linkFilm {
     text-decoration: none;
     color: black;
+}
+
+.input {
+    margin-left: 10px;
 }
